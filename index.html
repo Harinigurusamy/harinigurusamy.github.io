@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harini G | UI/UX Designer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f8f9ff;
+  color: #1a1a1a;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* HERO */
+.hero {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #555;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  background: #6C63FF;
+  color: white;
+  text-decoration: none;
+}
+
+/* SECTION */
+section {
+  padding: 60px 0;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+/* PROJECTS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #eee;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1>Harini G</h1>
+    <h3>UI/UX Designer</h3>
+    <p>Designing intuitive and user-friendly digital experiences</p>
+    <a href="#projects" class="btn">View Projects</a>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <h2>UI/UX Projects</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <img src="images/food.png">
+        <h3>Food Delivery App</h3>
+        <p>Designed a seamless food ordering experience using Figma.</p>
+        <a href="#">View Prototype</a>
+      </div>
+
+      <div class="card">
+        <img src="images/sweet.png">
+        <h3>Sweet Stall E-Commerce</h3>
+        <p>Created clean UI for a local sweet shop platform.</p>
+        <a href="#">View Design</a>
+      </div>
+
+      <div class="card">
+        <img src="images/flipkart.png">
+        <h3>Flipkart Clone</h3>
+        <p>Built responsive UI using HTML & CSS.</p>
+      </div>
+
+      <div class="card">
+        <img src="images/dashboard.png">
+        <h3>Marine Dashboard UI</h3>
+        <p>Designed dashboard for data visualization.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Harini G
+</footer>
+
+</body>
+</html>
