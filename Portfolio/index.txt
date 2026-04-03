@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Harini — UI/UX Designer</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+
+<style>
+body {
+  font-family: 'DM Sans', sans-serif;
+  background:#0D1422;
+  color:#E2EAF4;
+}
+
+/* CARD */
+.project-card {
+  background:#162032;
+  border-radius:24px;
+  padding:28px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* PROBLEM SOLUTION */
+.ps-tile {
+  background:#D6EFE8;
+  color:#1a3028;
+  border-radius:14px;
+  padding:18px;
+}
+
+/* BUTTON */
+.btn {
+  background:#5EAEFF;
+  color:#0D1422;
+  padding:10px 20px;
+  border-radius:10px;
+  font-weight:600;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* BADGE */
+.badge {
+  background:#263347;
+  padding:6px 14px;
+  border-radius:999px;
+  font-size:14px;
+  font-weight:500;
+}
+
+/* AVATAR */
+.avatar {
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  border:4px solid #5EAEFF;
+  background:#1C2B40;
+}
+
+/* TABS */
+.tab {
+  cursor:pointer;
+  padding:6px 16px;
+  border-radius:999px;
+}
+.active {
+  background:#1C2B40;
+}
+
+/* IMAGE HOVER */
+.image-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.image-hover:hover {
+  transform: scale(1.06);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* SCROLL */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+
+<body>
+
+<div class="max-w-4xl mx-auto p-6 space-y-10">
+
+<!-- HERO -->
+<section class="project-card flex justify-between items-center fade-up">
+
+<div class="flex items-center gap-6">
+<div class="avatar"></div>
+
+<div>
+<h1 class="text-3xl font-bold">Harini</h1>
+<p class="text-blue-400">UI/UX Designer</p>
+
+<p class="text-gray-400 text-sm mt-2 max-w-md">
+I design intuitive, user-centered digital experiences that solve real problems 
+and create meaningful impact through clean and thoughtful interfaces.
+</p>
+</div>
+</div>
+
+<a href="./HARINI.pdf" target="_blank" class="btn">Resume</a>
+</section>
+
+<!-- PROJECTS -->
+<section class="fade-up">
+
+<h2 class="text-2xl mb-6">Projects</h2>
+
+<div class="flex gap-3 mb-6">
+<button class="tab active" onclick="filterProjects('all', this)">All</button>
+<button class="tab" onclick="filterProjects('mobile', this)">Mobile</button>
+<button class="tab" onclick="filterProjects('web', this)">Website</button>
+</div>
+
+<div class="space-y-8">
+
+<!-- FOOD -->
+<div class="project-card fade-up" data-cat="mobile">
+<h3 class="text-lg font-semibold mb-3">Food Ordering App</h3>
+
+<div class="grid grid-cols-2 gap-4 mb-5">
+<div class="ps-tile"><b>Problem</b><p>Users struggle to quickly find and order food due to cluttered interfaces, slow navigation, and lack of personalized recommendations.</p></div>
+<div class="ps-tile"><b>Solution</b><p>Designed a clean, intuitive food delivery experience that simplifies browsing, speeds up ordering, and enhances user satisfaction.</p></div>
+</div>
+
+<div class="flex justify-between gap-3 mb-5">
+<img src="./Image/homepage.png" class="h-[240px] w-[23%] object-contain rounded-2xl image-hover">
+<img src="./Image/fooddescription-page.png" class="h-[240px] w-[23%] object-contain rounded-2xl image-hover">
+<img src="./Image/cart-page.png" class="h-[240px] w-[23%] object-contain rounded-2xl image-hover">
+<img src="./Image/delivery-page.png" class="h-[240px] w-[23%] object-contain rounded-2xl image-hover">
+</div>
+
+<a href="https://www.figma.com/design/JjCmusrNTHM2HxE9Wu4Fo4/ordering-app" target="_blank" class="btn">View Figma</a>
+</div>
+
+<!-- ECOM -->
+<div class="project-card fade-up" data-cat="web">
+<h3 class="text-lg font-semibold mb-3">E-Commerce UI</h3>
+
+<div class="grid grid-cols-2 gap-4 mb-5">
+
+<div class="ps-tile">
+<b>Problem</b>
+<p>
+Users find it difficult to browse and order sweets online due to cluttered layouts, lack of clear categories, and a confusing checkout process.
+</p>
+</div>
+
+<div class="ps-tile">
+<b>Future Work</b>
+<p>
+Designed a clean and visually appealing sweet shop experience that makes browsing easy, highlights products, and simplifies ordering.
+</p>
+</div>
+
+</div>
+
+<div class="flex justify-between gap-3 mb-5">
+<img src="./Image/ecom-1.PNG" class="h-[240px] w-[23%] object-contain rounded-2xl image-hover">
+<img src="./Image/ecom-2.PNG" class="h-[240px] w-[23%] object-contain rounded-2xl image-hover">
+<img src="./Image/ecom-3.PNG" class="h-[240px] w-[23%] object-contain rounded-2xl image-hover">
+<img src="./Image/ecom-4.PNG" class="h-[240px] w-[23%] object-contain rounded-2xl image-hover">
+</div>
+
+<a href="javascript:void(0);"
+   onclick="window.open('https://www.figma.com/design/4Fc2xrkMpq5wShBkUTQ89A/Lala-Halwa-House?node-id=0-1&t=AZeYDHUWC7GgNddP-1','_blank')"
+   class="btn">
+   View Figma
+</a>
+
+</div>
+
+<!-- FLIPKART -->
+<div class="project-card fade-up" data-cat="web">
+<h3 class="text-lg font-semibold mb-3">Flipkart Clone</h3>
+
+<div class="grid grid-cols-2 gap-4 mb-5">
+<div class="ps-tile">
+<b>Problem</b>
+<p>
+To understand and replicate real world user interface.
+</p>
+</div>
+
+<div class="ps-tile">
+<b>Future Work</b>
+<p>
+Improve user experience by redesigning key flows like checkout and search.
+</p>
+</div>
+</div>
+
+<img src="./Image/flipkart.PNG"
+     class="w-full h-[260px] object-cover rounded-2xl image-hover mb-5">
+
+<div class="flex gap-3">
+<a href="http://127.0.0.1:5500/flipkart/index.html"
+   target="_blank"
+   class="btn">
+   View Live
+</a>
+</div>
+</div>
+
+<!-- MARINE -->
+<div class="project-card fade-up" data-cat="mobile">
+<h3 class="text-lg font-semibold mb-3">Marine Monitoring</h3>
+
+<div class="grid grid-cols-2 gap-4 mb-5">
+<div class="ps-tile"><b>Problem</b><p>Monitoring marine ecosystem health is challenging due to the vast ocean environment and the difficulty of manually identifying underwater changes and marine species.</p></div>
+<div class="ps-tile"><b>Solution</b><p>Built an AI-based solution using Tiny U-Net and YOLO to enable real-time marine ecosystem monitoring, reducing manual effort and improving detection accuracy.</p></div>
+</div>
+
+<div class="grid grid-cols-4 gap-3 mb-5">
+<img src="./Image/marine-1.PNG" class="h-[200px] object-cover rounded-2xl image-hover">
+<img src="./Image/marine-2.PNG" class="h-[200px] object-cover rounded-2xl image-hover">
+<img src="./Image/marine-3.PNG" class="h-[200px] object-cover rounded-2xl image-hover">
+<img src="./Image/marine-4.PNG" class="h-[200px] object-cover rounded-2xl image-hover">
+</div>
+
+<div class="flex gap-3">
+<a href="./paper/marine.pdf" target="_blank" class="btn">View Research</a>
+<a href="./Image/marine-1.PNG" target="_blank" class="btn">View Output</a>
+</div>
+</div>
+
+</div>
+</section>
+<section class="fade-up">
+
+<h2 class="text-2xl mb-6">Skills</h2>
+
+<div class="grid md:grid-cols-2 gap-5">
+
+<!-- DESIGN TOOLS -->
+<div class="bg-[#162032] p-5 rounded-2xl">
+<p class="text-blue-400 mb-3">Design Tools</p>
+
+<div class="flex flex-wrap gap-2">
+<span class="badge">Figma</span>
+<span class="badge">Adobe Illustrator</span>
+<span class="badge">Canva</span>
+<span class="badge">Adobe XD</span>
+<span class="badge">Photoshop</span>
+</div>
+</div>
+
+<!-- WIREFRAMING -->
+<div class="bg-[#162032] p-5 rounded-2xl">
+<p class="text-blue-400 mb-3">Wireframing & Prototyping</p>
+
+<div class="flex flex-wrap gap-2">
+<span class="badge">Wireframe.cc</span>
+<span class="badge">InVision</span>
+</div>
+</div>
+
+<!-- PROGRAMMING -->
+<div class="bg-[#162032] p-5 rounded-2xl">
+<p class="text-blue-400 mb-3">Programming Languages</p>
+
+<div class="flex flex-wrap gap-2">
+<span class="badge">Python</span>
+<span class="badge">C</span>
+<span class="badge">Java</span>
+</div>
+</div>
+
+<!-- WEB -->
+<div class="bg-[#162032] p-5 rounded-2xl">
+<p class="text-blue-400 mb-3">Web Technologies</p>
+
+<div class="flex flex-wrap gap-2">
+<span class="badge">HTML</span>
+<span class="badge">CSS</span>
+<span class="badge">JavaScript (Basics)</span>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="project-card fade-up">
+<h2 class="text-2xl mb-4">Contact</h2>
+
+<p class="text-gray-400 mb-4">
+Let’s design meaningful experiences together.
+</p>
+
+<div class="space-y-3 text-gray-300">
+
+<p>
+<b>Email:</b> 
+<a href="mailto:harini837847@gmail.com" class="text-blue-400">
+harini837847@gmail.com
+</a>
+</p>
+
+<p>
+<b>LinkedIn:</b> 
+<a href="https://www.linkedin.com/in/harini-g 312a94258/" target="_blank" class="text-blue-400">
+https://www.linkedin.com/in/harini-g 312a94258/
+
+</a>
+</p>
+
+</div>
+</section>
+</div>
+
+<script>
+function filterProjects(type, el){
+document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+el.classList.add('active');
+
+document.querySelectorAll('[data-cat]').forEach(card=>{
+card.style.display = (type==='all'||card.dataset.cat===type)?'block':'none';
+});
+}
+
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+});
+},{threshold:0.2});
+
+document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html> 
